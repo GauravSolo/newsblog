@@ -119,7 +119,7 @@
                         
                     echo "<li ><a class = '{$active}'href='category.php?cid={$rows['category_id']}'>{$rows['category_name']}</a></li>";
                 }}
-                echo "<li> <a href='admin/' style='color:yellow;'>User Panel</a></li>";
+                echo "<li> <a href='admin/' style='color:yellow;text-decoration:underline;'>User Panel</a></li>";
                 ?>
                 </ul>
             </div>
