@@ -4,6 +4,7 @@
         include "config.php";
         $fname = mysqli_real_escape_string($conn,$_POST['fname']);
         $lname = mysqli_real_escape_string($conn,$_POST['lname']);
+        $insta = mysqli_real_escape_string($conn,$_POST['insta']);
         $username = mysqli_real_escape_string($conn,$_POST['user']);
         $password = mysqli_real_escape_string($conn,md5($_POST['password']));
         $role = mysqli_real_escape_string($conn,$_POST['role']);
@@ -18,7 +19,7 @@
         }
         else 
         {
-            $sql1 = "INSERT INTO user(first_name,last_name,username,password,role) VALUE('{$fname}','{$lname}','{$username}','{$password}','{$role}')";
+            $sql1 = "INSERT INTO user(first_name,last_name,username,password,role,insta) VALUE('{$fname}','{$lname}','{$username}','{$password}','{$role}','{$insta}')";
            
             if(mysqli_query($conn,$sql1))
             {
@@ -70,7 +71,10 @@
                           <label>User Name</label>
                           <input type="text" name="user" class="form-control" placeholder="Username" required>
                       </div>
-
+                      <div class="form-group">
+                          <label>Instagram</label>
+                          <input type="text" name="insta" class="form-control" placeholder="insta">
+                      </div>
                       <div class="form-group">
                           <label>Password</label>
                           <input type="password" name="password" class="form-control" placeholder="Password" required>

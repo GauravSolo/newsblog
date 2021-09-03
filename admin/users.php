@@ -21,6 +21,7 @@
                       <thead>
                           <th>S.No.</th>
                           <th>Full Name</th>
+                          <th>Instagram</th>
                           <th>User Name</th>
                           <th>Role</th>
                           <th>Edit</th>
@@ -50,6 +51,7 @@
                           <tr>
                               <td class='id'><?php echo $serial++; ?></td>
                               <td><?php echo $rows["first_name"]." ".$rows["last_name"]; ?></td>
+                              <td><?php echo $rows["insta"];?></td>
                               <td><?php echo $rows["username"] ?></td>
                               <td><?php echo $rows["role"] ?></td>
                               <td class='edit'><a href="update-user.php?id=<?php echo $rows['user_id'];?>"><i class='fa fa-edit'></i></a></td>
